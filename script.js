@@ -23,7 +23,7 @@ function playerSelection(){
 
 }
 
-function playround(getcomputerChoice,playerSelection){
+function playround(){
     if (getcomputerChoice=="scissor"){
         if (playerChoice=="R")
         return("its a draw");   
@@ -31,5 +31,6 @@ function playround(getcomputerChoice,playerSelection){
 }
 
 function test(getcomputerChoice){
+    
 
 }
