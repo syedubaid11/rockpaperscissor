@@ -1,36 +1,49 @@
-computerSelection=0
-playerChoice=0
+//player choice
 
+var playerChoice=prompt("what is your choice: rock , paper , scissor");
 
-function getcomputerChoice(){
+//computer choice
 
-    let generatedNumber=Math.floor(Math.random()*4)
-    if (generatedNumber==1){
-        computerSelection="rock";
+var computerChoice = Math.ceil(Math.random() *3);
+
+if (computerChoice < 1) {
+    computerChoice = "rock";
+} else if(1 <= computerChoice <= 2) {
+    computerChoice = "paper";
+} else {
+    computerChoice = "scissor";
+}
+
+//defining function
+
+function game(playerChoice,computerChoice){
+    //checking for tie
+if(playerChoice==computerChoice){
+    return("It's a tie")
+}
+if(playerChoice=="rock"){
+    if(computerChoice="paper"){
+        return("Player wins")
+    }else{
+        return("Computer wins")
     }
-    if (generatedNumber==2){
-        computerSelection="paper";
-    }    
-    if (generatedNumber==3){
-        computerSelection="scissor";
+}
+if(playerChoice=="paper"){
+    if(computerChoice=="scissor"){
+        return("computer wins!")
+    }else{
+        return("player wins")
     }
-    return computerSelection;
-}
-
-function playerSelection(){
-    var playerChoice=prompt("Enter your choice (R,P,S)")
-    return playerChoice;
-
-}
-
-function playround(){
-    if (getcomputerChoice=="scissor"){
-        if (playerChoice=="R")
-        return("its a draw");   
+if(playerChoice=="scissor"){
+    if(computerChoice=="rock"){
+        return("computer wins!")
+    }else{
+        return("player wins!")
+    }
+}    
 }
 }
 
-function test(getcomputerChoice){
-    
+game()
 
-}
+console.log(game(playerChoice,computerChoice))
