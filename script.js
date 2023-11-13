@@ -1,5 +1,5 @@
 //player choice
-
+function main(){
 var playerChoice=prompt("what is your choice: rock , paper , scissor");
 
 //computer choice
@@ -44,6 +44,5 @@ if(playerChoice=="scissor"){
 }
 }
 
-game()
-
+}
 console.log(game(playerChoice,computerChoice))
