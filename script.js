@@ -1,48 +1,50 @@
 //player choice
 function main(){
-var playerChoice=prompt("what is your choice: rock , paper , scissor");
 
-//computer choice
+    var playerChoice=prompt("what is your choice: rock , paper , scissor");
 
-var computerChoice = Math.ceil(Math.random() *3);
+    //computer choice
 
-if (computerChoice < 1) {
-    computerChoice = "rock";
-} else if(1 <= computerChoice <= 2) {
-    computerChoice = "paper";
-} else {
-    computerChoice = "scissor";
-}
+    var computerChoice = Math.ceil(Math.random() *3);
 
-//defining function
+    if (computerChoice < 1) {
+        computerChoice = "rock";
+    } else if(1 <= computerChoice <= 2) {
+        computerChoice = "paper";
+    } else {
+        computerChoice = "scissor";
+    }
 
-function game(playerChoice,computerChoice){
+    //defining function
+    function game(playerChoice,computerChoice){
+
+
     //checking for tie
-if(playerChoice==computerChoice){
-    return("It's a tie")
-}
-if(playerChoice=="rock"){
-    if(computerChoice="paper"){
-        return("Player wins")
-    }else{
-        return("Computer wins")
+        if(playerChoice==computerChoice){
+            output.textContent="It's a tie"
     }
-}
-if(playerChoice=="paper"){
-    if(computerChoice=="scissor"){
-        return("computer wins!")
-    }else{
-        return("player wins")
+    if(playerChoice=="rock"){
+        if(computerChoice="paper"){
+            return("Player wins")
+        }else{
+            output.textContent="Player Wins"
+        }
     }
-if(playerChoice=="scissor"){
-    if(computerChoice=="rock"){
-        return("computer wins!")
-    }else{
-        return("player wins!")
+    if(playerChoice=="paper"){
+        if(computerChoice=="scissor"){
+            output.textContent="Computer Wins"
+        }else{
+            output.textContent="Player Wins"
+        }
     }
-}    
-}
-}
+    if(playerChoice=="scissor"){
+        if(computerChoice=="rock"){
+            return("computer wins!")
+        }else{
+            return("player wins!")
+        }  
+    }    
+        }
+    }
 
-}
-console.log(game(playerChoice,computerChoice))
+    console.log(game(playerChoice,computerChoice))
